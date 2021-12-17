@@ -68,7 +68,7 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 %if %{with doc}
 cd docs
 PYTHONPATH=$(pwd)/../src \
-%{__python3} -m sphinx -W . build/html
+%{__python3} -m sphinx . build/html
 %endif
 
 %install
