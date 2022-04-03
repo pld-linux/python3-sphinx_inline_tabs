@@ -7,7 +7,7 @@ Summary:	Add inline tabbed content to your Sphinx documentation
 Summary(pl.UTF-8):	Wstawianie treści z tabulacjami do dokumentacji Sphinksa
 Name:		python3-sphinx_inline_tabs
 Version:	2021.8.17b10
-Release:	4
+Release:	5
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/sphinx-inline-tabs/
