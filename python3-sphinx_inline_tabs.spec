@@ -1,28 +1,30 @@
 #
 # Conditional build:
 %bcond_without	doc	# API documentation
-%bcond_with	tests	# unit tests (not included in sdist)
+%bcond_with	tests	# unit tests; expected output and sphinx.testing.path usage predate Sphinx 8
 
 Summary:	Add inline tabbed content to your Sphinx documentation
 Summary(pl.UTF-8):	Wstawianie treści z tabulacjami do dokumentacji Sphinksa
 Name:		python3-sphinx_inline_tabs
-Version:	2023.4.21
+Version:	2025.12.21.14
 Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/sphinx-inline-tabs/
 Source0:	https://files.pythonhosted.org/packages/source/s/sphinx-inline-tabs/sphinx_inline_tabs-%{version}.tar.gz
-# Source0-md5:	8ad2ed91257b0199553357d4d9627742
+# Source0-md5:	4d75d119f671f0857acf9574f94e38d0
 URL:		https://pypi.org/project/sphinx-inline-tabs/
 BuildRequires:	python3-build
-BuildRequires:	python3-flit_core >= 2
+BuildRequires:	python3-flit_core >= 3.11
 BuildRequires:	python3-flit_core < 4
 BuildRequires:	python3-installer
 BuildRequires:	python3-modules >= 1:3.8
-BuildRequires:	python3-setuptools
 %if %{with tests}
 BuildRequires:	python3-Sphinx >= 3
+BuildRequires:	python3-bs4
+BuildRequires:	python3-myst_parser
 BuildRequires:	python3-pytest
+BuildRequires:	python3-pytest-regressions
 BuildRequires:	python3-pytest-cov
 BuildRequires:	python3-pytest-xdist
 %endif
